@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de información en Formularios</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .form-container {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-submit {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+
+.btn-reset {
+  background-color: #ccc;
+  color: #333;
+}
+
+.btn-reset:hover {
+  background-color: #999;
+}
+input:focus { border: 2px solid blue; }
+    </style>
+
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header>
+    <div class="header-icono">🤖</div>
+    <div>
+      <h1>IA Hoy</h1>
+      <p>Portal educativo sobre Inteligencia Artificial · Educación Media · El Salvador</p>
+    </div>
+  </header>
+
+  <!-- ==================== NAV ==================== -->
+  <nav>
+    <a href="main.html" class="activo">Inicio</a>
+    <a href="noticias.html">Noticias</a>
+    <a href="#">Herramientas</a>
+    <a href="#">Tutoriales</a>
+    <a href="#">Glosario</a>
+    <a href="formularios.html">Formulario</a>
+    <a href="#" class="btn-especial">🚀 Explorar IA</a>
+  </nav>
+
+  <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
+  <div class="contenedor">
+
+    <!-- HERO BANNER -->
+    <section class="hero">
+      <span class="hero-badge">Ingreso de Información</span>
+      <h2>La <span>Matricula de Estudiantes</span><br />está cambiando el mundo</h2>
+      <p>A través de este formulario se matrículan los estudiantes en el sistema educativo.</p>
+    </section>
+
+    <!-- MAIN: artículos principales -->
+    <main>
+
+    <article class="card">
+        <p class="card-tag">Captura de Datos de Matricula</p>
+        <h3>Ingrese sus datos</h3>
+        <div class="form-container">
+            <form action="" method="post">
+                <h2>Contáctanos</h2>
+    
+                <div class="form-group">
+                    <label for="nombre">Escribe tu nombre:</label>
+                    <input type="text" name="txtnombre" id="nombre" placeholder="Escribe tu nombre" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Escribe tu email" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="txtmensaje" id="mensaje" rows="5" placeholder="Escribe tu mensaje"></textarea>
+                </div>
+    
+                <div class="form-buttons">
+                    <button type="submit" class="btn-submit">Enviar</button>
+                    <button type="reset" class="btn-reset">Limpiar</button>
+                </div>
+            </form>
+        </div>
+    </article>
+
+      
+
+      
+
+    </main>
+
+    <!-- ASIDE: contenido lateral -->
+    <aside>
+
+      <div class="aside-card">
+        <h4>📊 IA en cifras</h4>
+        <div class="stat-item">
+          <span class="stat-label">Usuarios de ChatGPT</span>
+          <span class="stat-valor">200M+</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Inversión global en IA</span>
+          <span class="stat-valor">$200B</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Empleos relacionados con IA</span>
+          <span class="stat-valor">↑ 74%</span>
+        </div>
+      </div>
+
+      <div class="aside-card">
+        <h4>🛠️ Herramientas populares</h4>
+        <div class="herramienta-item">
+          <span class="herramienta-icono">💬</span>
+          <div>
+            <div class="herramienta-nombre">ChatGPT</div>
+            <div class="herramienta-desc">Asistente de texto y código</div>
+          </div>
+        </div>
+        <div class="herramienta-item">
+          <span class="herramienta-icono">🎨</span>
+          <div>
+            <div class="herramienta-nombre">Midjourney</div>
+            <div class="herramienta-desc">Generación de imágenes</div>
+          </div>
+        </div>
+        <div class="herramienta-item">
+          <span class="herramienta-icono">🔵</span>
+          <div>
+            <div class="herramienta-nombre">Copilot</div>
+            <div class="herramienta-desc">Asistente para programar</div>
+          </div>
+        </div>
+        <div class="herramienta-item">
+          <span class="herramienta-icono">🎵</span>
+          <div>
+            <div class="herramienta-nombre">Suno</div>
+            <div class="herramienta-desc">Creación de música con IA</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="aside-card">
+        <h4>💡 Dato de la semana</h4>
+        <span class="dato-grande">85M</span>
+        <span class="dato-desc">de empleos podrían ser transformados por la IA para el año 2025, según el Foro Económico Mundial.</span>
+      </div>
+
+    </aside>
+
+  </div><!-- fin .contenedor -->
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <div class="footer-marca">
+      🤖 IA Hoy
+      <span>Recurso educativo para estudiantes de desarrollo de software · El Salvador</span>
+    </div>
+    <nav class="footer-links">
+      <a href="#">Acerca de</a>
+      <a href="#">Contacto</a>
+      <a href="#">Privacidad</a>
+      <a href="#">Recursos</a>
+    </nav>
+    <p class="footer-copy">&copy; 2025 IA Hoy · Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>

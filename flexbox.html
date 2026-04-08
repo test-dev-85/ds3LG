@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Flexbox Moderna</title>
+    <style>
+        /* Reset de estilos básicos */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            color: #333;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+            font-size: 2.5rem;
+        }
+
+        p {
+            max-width: 600px;
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Contenedor Principal */
+        #cajapadre {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px; /* Espacio moderno entre elementos */
+            width: 100%;
+            max-width: 1100px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 15px;
+            backdrop-filter: blur(5px); /* Efecto de cristal esmerilado */
+        }
+
+        /* Estilo de las subcajas (tarjetas) */
+        #cajapadre > div {
+            flex: 1 1 200px; /* Crece, se encoge y tiene un tamaño base de 200px */
+            height: 250px;
+            overflow: hidden; /* Corta el exceso de la imagen al hacer zoom */
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            background-color: #fff;
+        }
+
+        /* Efecto al pasar el mouse */
+        #cajapadre > div:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Ajuste de imágenes */
+        #cajapadre > div img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: filter 0.3s ease, transform 0.5s ease;
+        }
+
+        #cajapadre > div:hover img {
+            filter: brightness(1.1);
+            transform: scale(1.1);
+        }
+
+        /* Responsividad para móviles */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            #cajapadre > div {
+                flex: 1 1 100%; /* Una columna en pantallas muy pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Galería Flexbox</h1>
+    <p>Un diseño fluido y moderno utilizando el poder de Flexbox. Pasa el cursor sobre las imágenes para ver el efecto.</p>
+
+    <div id="cajapadre">
+        <div id="hijo1"><img src="ia-generativa.jpg" alt="IA"></div>
+        <div id="hijo2"><img src="2.jpg" alt="Imagen 2"></div>
+        <div id="hijo3"><img src="3.jpg" alt="Imagen 3"></div>
+        <div id="hijo4"><img src="4.jpg" alt="Imagen 4"></div>
+        <div id="hijo5"><img src="5.jpg" alt="Imagen 5"></div>
+    </div>
+
+</body>
+</html>
